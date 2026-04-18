@@ -1,7 +1,7 @@
 // ============================================================
 //  cover.typ — Portada oficial PAMUFAH
 // ============================================================
-
+#import "macros.typ": *   // ← Agrega esta línea
 #set page(margin: 2cm)
 
 #align(center)[

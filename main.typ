@@ -13,7 +13,7 @@
   subtitle: [Convocatoria Energía Sostenible para el Territorio:\
              Transición Justa, Comunitaria e Innovadora],
   institution: [Universidad de Cartagena],
-  ally: [Econova S.A.S.],
+  ally: [Cotecmar S.A.S],
   doc,
 )
 

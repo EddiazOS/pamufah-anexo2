@@ -60,26 +60,28 @@
       width: 100%,
       inset: (x: 8pt, y: 6pt),
       radius: 2pt,
-    )[
-      #set text(fill: white, weight: "bold", size: 13pt)
-      #counter(heading).display(). #it.body
-    ]
+    )
+      set text(fill: white, weight: "bold", size: 13pt)
+      counter(heading).display() + it.body
+    
     v(0.5em)
   }
 
   show heading.where(level: 2): it => {
     v(0.8em)
     set text(fill: rgb("#003366"), weight: "semibold", size: 11.5pt)
-    counter(heading).display(). #it.body
+    counter(heading).display() + it.body
+    
     v(0.3em)
     line(length: 100%, stroke: 0.5pt + rgb("#003366"))
     v(0.3em)
   }
 
   show heading.where(level: 3): it => {
-    v(0.5em)
-    set text(weight: "semibold", size: 11pt)
-    counter(heading).display(). #it.body
+    v(0.5em)[
+    #set text(weight: "semibold", size: 11pt)
+    #counter(heading).display(). #it.body
+    ]
     v(0.2em)
   }
 
