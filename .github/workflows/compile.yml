@@ -1,0 +1,26 @@
+name: Compilar Documento
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar Typst
+        uses: typst-community/setup-typst@v3
+
+      - name: Compilar Anexo 2
+        run: typst compile main.typ pamufah-anexo2.pdf
+
+      - name: Subir PDF como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: pamufah-anexo2-pdf
+          path: pamufah-anexo2.pdf
+          retention-days: 30

@@ -1,0 +1,15 @@
+# Typst compilado
+*.pdf
+*.aux
+
+# Typst cache
+.typst/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Assets temporales (no versionar PDFs generados)
+output/
